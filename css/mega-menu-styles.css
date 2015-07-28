@@ -1,0 +1,154 @@
+/*
+ NAKED menu system v0.1 (http://www.n-k-d.co.uk/fully-accessible-flyout-mobile-menu)
+ Fully accessible flyout mobile menu
+ Built by Neil Kelsey and Dave Hutson 27.07.2015
+ Copyright 2015 Neil Kelsey Ltd.
+ Licensed under MIT (https://github.com/XXX/LICENSE)
+*/
+
+/* Start of Mega menu styling */
+.main-navigation li .mega-menu { 
+  position: absolute; /* take it out of normal flow */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.1s, opacity 0.1s linear;
+}
+.main-navigation > li:hover > .mega-menu { 
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+.mega-menu
+{
+    position:absolute;
+    z-index: 100;
+    border-top:5px solid #ec008c;
+    border-bottom:5px solid #ec008c;
+    background:#FFF;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(50, 50, 50, 0.49);
+    -moz-box-shadow:    0px 0px 30px 0px rgba(50, 50, 50, 0.49);
+    box-shadow:         0px 0px 30px 0px rgba(50, 50, 50, 0.49);
+}
+.mega-menu p
+{
+    font-size:13px;
+}
+.mega-menu li
+{
+    list-style:none;
+}
+.mega-menu .container
+{
+    width:1140px;
+    margin:0;
+    padding-left:15px;
+    padding-right:6px;
+}
+#menu-primary-navigation ul
+{
+    width:100%;
+}
+#menu-primary-navigation li .mega-menu h2, #menu-primary-navigation li .mega-menu p.title, .mega-menu span.title, #menu-primary-navigation li .mega-menu h2 a, #menu-primary-navigation li .mega-menu p.title a, #menu-primary-navigation li .mega-menu h3, #menu-primary-navigation li .mega-menu h3 a
+{
+    font-weight: bold;
+    font-size:15px;
+    line-height:17px;
+    padding:0;
+    margin:14px 0 15px 0;
+}
+#menu-primary-navigation li .mega-menu a
+{
+    padding:0;
+    font-size:13px;
+    line-height:16px;
+}
+#menu-primary-navigation li .mega-menu span.title
+{
+    display:block;
+    padding: 0px;
+    margin: 14px 0px 15px;
+}
+#menu-primary-navigation li .mega-menu span.title a
+{
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 17px;
+    padding: 0px;
+    margin: 14px 0px 15px;
+}
+#menu-primary-navigation li .mega-menu ul
+{
+    border-left:1px solid #ec008c;
+    margin:0 0 15px 0;
+    padding:0;
+}
+#menu-primary-navigation li .mega-menu .featured ul
+{
+    border-left:none;
+    margin:0;
+}
+#menu-primary-navigation li .mega-menu li
+{
+    margin: 0 0 10px 10px;
+    background:
+        #FFF;
+}
+#menu-primary-navigation li:hover .mega-menu a
+{
+    color:#056ab6;
+}
+#menu-primary-navigation li:hover .mega-menu a:hover
+{
+    color:#ec008c;
+}
+ul#menu-primary-navigation .menu-one .mega-menu
+{
+    left:-440px;
+    border-top:5px solid #ec008c;
+    border-bottom:5px solid #ec008c;
+}
+
+@media all and (max-width: 1999px) {
+
+    .mega-menu .container
+    {
+        width:940px;
+    }
+
+    ul#menu-primary-navigation .menu-one .mega-menu
+    {
+        left:-241px;
+        border-top:5px solid #ec008c;
+        border-bottom:5px solid #ec008c;
+    }
+
+}
+
+@media all and (max-width: 991px) {
+
+    .mega-menu .container
+    {
+        width:720px;
+    }
+
+    ul#menu-primary-navigation .menu-one .mega-menu
+    {
+        left:-21px;
+        border-top:5px solid #ec008c;
+        border-bottom:5px solid #ec008c;
+    }
+
+}
+
+@media all and (max-width: 770px) {
+
+    .mega-menu
+    {
+        display:none;
+    }
+
+}
+
+/* End of Mega menu styling */

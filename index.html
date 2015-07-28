@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en-GB" id="doc" class="js">
+<head>
+  <title>N-K-D | Fully accessible flyout mobile menu</title>
+  <meta charset="UTF-8">
+
+  <!-- Add the stylesheets, this example is built up on the Bootstrap frame work but if you want to use something else that's fine, this system can stand alone outside of Bootstrap -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main-screen-styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/mobile-menu-styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/mega-menu-styles.css" /><!-- If you don't want to use the mega menu on desktop view then you don't need these styles -->
+
+  <!-- Add the javascript (jquery) and out one javascript file -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+  <script type="text/javascript" src="js/Mobile-Keyboard.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<a href="#content" class="offscreen">Skip to main content</a>   
+    
+<div id="siteWrapper" class=""><!-- This is the div the mobile menu pushes to the left -->
+  <div class="navbar navbar-default navbar-static-top" >
+  <div class="container">
+    <span id="logo-header">       
+      <a href="http://www.n-k-d.co.uk/" title="NAKED">
+        <img src="img/n-k-d-logo-grey.png" alt="NAKED">
+      </a>
+    </span>
+    <button class="sidebar-button" value="Mobile navigation menu collapsed" aria-expanded="false">
+      <span class="sr-only">Mobile navigation menu</span>
+      <span class="mobile-nav-toggle-label fixed-nav-toggle-label">
+        <span class="top-bar"> </span>
+        <span class="middle-bar"> </span>
+        <span class="bottom-bar"> </span>
+      </span>
+    </button>
+    <nav class="drawer-wrap" role="navigation">
+        <div id="mobileNavWrapper" class="nav-wrapper">
+          <nav id="mobileNavigation" role="navigation">
+            <ul id="menu-primary-navigation" class="nav navbar-nav main-navigation">
+              <li class="visible-xs home"><a href="http://www.n-k-d.co.uk/">Home</a></li>
+              <li class="menu-one"><a href="http://www.n-k-d.co.uk/">Menu item 1</a>
+                <div class="mega-menu"><!-- If you don't want to use the mega menu on desktop view then you don't need these elements -->
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                        <span class="title"><a href="http://www.n-k-d.co.uk/">Section one</a></span>
+                        <ul> 
+                          <li><a href="http://www.n-k-d.co.uk/" >First child of section one</a></li>
+                          <li><a href="http://www.n-k-d.co.uk/" >Second child of section one</a></li>
+                          <li><a href="http://www.n-k-d.co.uk/" >Third child of section one</a></li>
+                          <li><a href="http://www.n-k-d.co.uk/" >Forth child of section one</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6 col-sm-6">
+                        <span class="title"><a href="http://www.n-k-d.co.uk/">Section two</a></span>
+                        <ul> 
+                          <li><a href="http://www.n-k-d.co.uk/" >First child of section two</a></li>
+                          <li><a href="http://www.n-k-d.co.uk/" >Second child of section two</a></li>
+                          <li><a href="http://www.n-k-d.co.uk/" >Third child of section two</a></li>
+                          <li><a href="http://www.n-k-d.co.uk/" >Forth child of section two</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End of mega menu -->
+              </li>
+              <li class="menu-two"><a href="http://www.n-k-d.co.uk/">Menu item 2</a></li>
+              <li class="menu-three"><a href="http://www.n-k-d.co.uk/">Menu item 3</a></li>
+              <li class="menu-four"><a href="http://www.n-k-d.co.uk/">Menu item 4</a></li>
+              <li class="menu-five"><a href="http://www.n-k-d.co.uk/">Menu item 5</a></li>
+            </ul>
+          </nav>
+          <div class="visible-xs"><!-- Display these elements only in the mobile menu -->
+            <div class="float-left">
+              <form role="search" method="get" id="searchform-mobile" action="http://www.n-k-d.co.uk/">
+                <label class="screen-reader-text invisible" for="q-mobile">Search site</label>
+                <input class="search" type="text" placeholder="Search site" name="q-mobile" id="q-mobile">
+                <input class="btn mr20" type="submit" id="searchsubmit-mobile" value="Search">
+              </form>
+            </div>
+          </div><!-- End of extra mobile menu elements -->
+        </div>
+      </nav>
+    </div>
+  </div><!-- End of header and navigation -->
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div id="content">
+          <h1>Start of the main content</h1>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sollicitudin, turpis at feugiat dapibus, lectus eros malesuada magna, non vehicula nulla odio euismod lacus. In dictum finibus ex et tempor. <a href="http://www.n-k-d.co.uk">Here's the first link in the main content</a> Vivamus blandit commodo malesuada. Suspendisse sed lectus quis tellus imperdiet vulputate. Duis ut metus sapien. In lacinia tortor nisi, molestie mattis nibh auctor id. Integer accumsan vestibulum purus. Morbi luctus, ligula ut vestibulum vulputate, lacus eros aliquam ligula, et laoreet ligula elit vitae mi.</p>
+
+          <p>Fusce sit amet odio dictum, bibendum ex vitae, tristique tortor. Proin rutrum sem id fermentum finibus. Nullam faucibus dignissim sem, a dictum elit egestas id. In commodo sollicitudin tempus. Etiam mattis, tellus at dictum pellentesque, eros risus porta sem, id varius quam odio a quam. Phasellus sed consectetur leo, sed luctus velit. Morbi eu diam ex. Curabitur at nunc eleifend, tempor neque vitae, tempus sapien. Curabitur tincidunt odio odio, <a href="http://www.n-k-d.co.uk">here's the second link in the main content</a> quis blandit augue facilisis eget. Duis consequat euismod risus id tincidunt. Sed elementum molestie lorem. Vivamus vulputate sollicitudin leo, id eleifend mi dignissim a. Suspendisse accumsan diam in semper bibendum.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sollicitudin, turpis at feugiat dapibus, lectus eros malesuada magna, non vehicula nulla odio euismod lacus. In dictum finibus ex et tempor. Vivamus blandit commodo malesuada. Suspendisse sed lectus quis tellus imperdiet vulputate. Duis ut metus sapien. In lacinia tortor nisi, molestie mattis nibh auctor id. Integer accumsan vestibulum purus. Morbi luctus, ligula ut vestibulum vulputate, lacus eros aliquam ligula, et laoreet ligula elit vitae mi.</p>
+
+          <p>Fusce sit amet odio dictum, bibendum ex vitae, tristique tortor. <a href="http://www.n-k-d.co.uk">Here's the third link in the main content</a> proin rutrum sem id fermentum finibus. Nullam faucibus dignissim sem, a dictum elit egestas id. In commodo sollicitudin tempus. Etiam mattis, tellus at dictum pellentesque, eros risus porta sem, id varius quam odio a quam. Phasellus sed consectetur leo, sed luctus velit. Morbi eu diam ex. Curabitur at nunc eleifend, tempor neque vitae, tempus sapien. Curabitur tincidunt odio odio, quis blandit augue facilisis eget. Duis consequat euismod risus id tincidunt. Sed elementum molestie lorem. Vivamus vulputate sollicitudin leo, id eleifend mi dignissim a. Suspendisse accumsan diam in semper bibendum.</p>
+
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sollicitudin, turpis at feugiat dapibus, lectus eros malesuada magna, non vehicula nulla odio euismod lacus. In dictum finibus ex et tempor. Vivamus blandit commodo malesuada. Suspendisse sed lectus quis tellus imperdiet vulputate. Duis ut metus sapien. In lacinia tortor nisi, molestie mattis nibh auctor id. Integer accumsan vestibulum purus. Morbi luctus, ligula ut vestibulum vulputate, lacus eros aliquam ligula, et laoreet ligula elit vitae mi.</p>
+
+          <p>Fusce sit amet odio dictum, bibendum ex vitae, tristique tortor. Proin rutrum sem id fermentum finibus. Nullam faucibus dignissim sem, a dictum elit egestas id. In commodo sollicitudin tempus. Etiam mattis, tellus at dictum pellentesque, eros risus porta sem, id varius quam odio a quam. Phasellus sed consectetur leo, sed luctus velit. Morbi eu diam ex. Curabitur at nunc eleifend, tempor neque vitae, tempus sapien. Curabitur tincidunt odio odio, quis blandit augue facilisis eget. Duis consequat euismod risus id tincidunt. Sed elementum molestie lorem. Vivamus vulputate sollicitudin leo, id eleifend mi dignissim a. Suspendisse accumsan diam in semper bibendum.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sollicitudin, turpis at feugiat dapibus, lectus eros malesuada magna, non vehicula nulla odio euismod lacus. In dictum finibus ex et tempor. Vivamus blandit commodo malesuada. Suspendisse sed lectus quis tellus imperdiet vulputate. Duis ut metus sapien. In lacinia tortor nisi, molestie mattis nibh auctor id. Integer accumsan vestibulum purus. Morbi luctus, ligula ut vestibulum vulputate, lacus eros aliquam ligula, et laoreet ligula elit vitae mi.</p>
+
+          <p>Fusce sit amet odio dictum, bibendum ex vitae, tristique tortor. Proin rutrum sem id fermentum finibus. Nullam faucibus dignissim sem, a dictum elit egestas id. In commodo sollicitudin tempus. Etiam mattis, tellus at dictum pellentesque, eros risus porta sem, id varius quam odio a quam. Phasellus sed consectetur leo, sed luctus velit. Morbi eu diam ex. Curabitur at nunc eleifend, tempor neque vitae, tempus sapien. Curabitur tincidunt odio odio, quis blandit augue facilisis eget. Duis consequat euismod risus id tincidunt. Sed elementum molestie lorem. Vivamus vulputate sollicitudin leo, id eleifend mi dignissim a. Suspendisse accumsan diam in semper bibendum.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sollicitudin, turpis at feugiat dapibus, lectus eros malesuada magna, non vehicula nulla odio euismod lacus. In dictum finibus ex et tempor. Vivamus blandit commodo malesuada. Suspendisse sed lectus quis tellus imperdiet vulputate. Duis ut metus sapien. In lacinia tortor nisi, molestie mattis nibh auctor id. Integer accumsan vestibulum purus. Morbi luctus, ligula ut vestibulum vulputate, lacus eros aliquam ligula, et laoreet ligula elit vitae mi.</p>
+
+        </div><!-- end content -->
+      </div>   
+    </div>
+  </div>
+</div><!-- End of siteWrapper -->
+</body>
+</html>

@@ -1,0 +1,221 @@
+/*
+ NAKED menu system v0.1 (http://www.n-k-d.co.uk/fully-accessible-flyout-mobile-menu)
+ Fully accessible flyout mobile menu
+ Built by Neil Kelsey and Dave Hutson 27.07.2015
+ Copyright 2015 Neil Kelsey Ltd.
+ Licensed under MIT (https://github.com/XXX/LICENSE)
+*/
+
+/* Start of structure styling */
+
+/* This is an IE11 fix for the postion of the mobile menu as IE11 doesn't listen to 'position:fixed' */
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    body.active-sidebar .drawer-wrap
+    {  
+      right:0px!important;
+    }
+    a:focus, .sidebar-button:focus
+    {
+      position: relative;
+      z-index: 9;
+    }
+  }
+/* End of IE11 fix */
+
+
+/* Start of styling for tablet */
+
+@media all and (max-width: 991px) {
+
+  ul#menu-primary-navigation
+  {
+      float:right;
+      margin:0;
+  }
+
+}
+
+/* Start of styling for tablet */
+
+/* Start of styling for mobile */
+ 
+@media all and (max-width: 767px) {
+    nav ul
+    {
+        position: static;
+    }
+    .navbar-nav
+    {
+          float:none!important;
+          margin:0;
+    }
+    .invisible
+    {
+          display:none!important;
+    }
+
+  .mobile-nav-toggle-label .top-bar,
+  .mobile-nav-toggle-label .middle-bar,
+  .mobile-nav-toggle-label .bottom-bar {
+    width: 22px;
+    height: 2px;
+    background-color: #ec008c;
+    -webkit-transition: -webkit-transform .15s 0s ease-in-out, top .15s .15s ease-in-out;
+    -moz-transition: -moz-transform .15s 0s ease-in-out, top .15s .15s ease-in-out;
+    -ms-transition: -ms-transform .15s 0s ease-in-out, top .15s .15s ease-in-out;
+    -o-transition: -o-transform .15s 0s ease-in-out, top .15s .15s ease-in-out;
+    transition: transform .15s 0s ease-in-out, top .15s .15s ease-in-out;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .mobile-nav-toggle-label .middle-bar {
+    -webkit-transition: opacity 0s .15s linear;
+    -moz-transition: opacity 0s .15s linear;
+    -ms-transition: opacity 0s .15s linear;
+    -o-transition: opacity 0s .15s linear;
+    transition: opacity 0s .15s linear;
+    top: 7px;
+  }
+  
+  .mobile-nav-toggle-label .bottom-bar {
+    top: 14px;
+  }
+  .fix-header-nav .mobile-nav-toggle-label.fixed-nav-toggle-label {
+    visibility: visible;
+    opacity: 1;
+  }
+  #siteWrapper {
+    height: 99.9%;
+    width: 100%;
+    z-index:0;
+    -webkit-transition: -webkit-transform .14s ease-in-out;
+    -moz-transition: -moz-transform .14s ease-in-out;
+    -ms-transition: -ms-transform .14s ease-in-out;
+    -o-transition: -o-transform .14s ease-in-out;
+    transition: transform .14s ease-in-out;
+  }
+
+  #mobileNavWrapper input.search
+  {
+    width:163px;
+    margin:39px 4px 0 20px;
+    padding:10px;
+  }
+ 
+  #mobileNavWrapper input#searchsubmit-mobile
+  {
+    color:#FFF;
+    padding:9px;
+    margin:0!important;
+    min-height:24px;
+    border-radius: 5px;
+    background: #ec008c;
+  }
+
+    /*****     Position the menu button     *****/
+  .js .drawer-wrap {  
+    width: 270px; 
+    z-index: 2; 
+    position: fixed;
+    right:-270px;
+    top:0;
+  }
+  body.active-sidebar #siteWrapper {
+    position: fixed;
+    z-index:1;
+    height: 100%;
+    -webkit-transform: translate3d(-270px, 0, 0);
+    -moz-transform: translate3d(-270px, 0, 0);
+    -ms-transform: translate3d(-270px, 0, 0);
+    -o-transform: translate3d(-270px, 0, 0);
+    transform: translate3d(-270px, 0, 0);
+  }
+    
+  body.active-sidebar #siteWrapper .mobile-nav-toggle-label .top-bar,
+  body.active-sidebar #siteWrapper .mobile-nav-toggle-label .bottom-bar {
+    -webkit-transition: top .15s .15s ease-in-out, -webkit-transform .15s .3s ease-in-out;
+    -moz-transition: top .15s .15s ease-in-out, -moz-transform .15s .3s ease-in-out;
+    -ms-transition: top .15s .15s ease-in-out, -ms-transform .15s .3s ease-in-out;
+    -o-transition: top .15s .15s ease-in-out, -o-transform .15s .3 ease-in-out;
+    transition: top .15s .15s ease-in-out, transform .15s .3s ease-in-out;
+  }
+  
+  body.active-sidebar #siteWrapper .mobile-nav-toggle-label .top-bar {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 7px;
+  }
+  body.active-sidebar #siteWrapper .mobile-nav-toggle-label .middle-bar {
+    opacity: 0;
+  }
+  
+  body.active-sidebar #siteWrapper .mobile-nav-toggle-label .bottom-bar {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 7px;
+  }
+  .sidebar-button
+  {
+    position: relative;
+    float: right;
+    padding:18px 20px 19px 21px;
+  }
+
+    button.sidebar-button {margin:20px 0; background: transparent none repeat scroll 0% 0%; border: medium none;}
+
+  button.sidebar-button span.mobile-nav-toggle-label 
+  {
+    position:relative;
+    top:-7px;
+    left:11px;
+  }
+
+  /*****     When the menu is closed this hides the links from the tab index     *****/
+  .js .drawer-wrap a, .js .drawer-wrap input#q-mobile, .js .drawer-wrap input#searchsubmit-mobile
+  { 
+    display:none;
+  }
+  /*****     Adds the links back in when the sidebar menu is open     *****/
+  .active-sidebar .drawer-wrap a
+  { 
+    display:block;
+  }
+  .active-sidebar .drawer-wrap input#q-mobile, .active-sidebar .drawer-wrap input#searchsubmit-mobile
+  { 
+    display:inline-block;
+  }
+  .drawer-wrap, .content-wrap
+  {
+    height: 100%;
+    background: #d3d3d3;
+  }
+}
+
+/* End of styling for mobile */
+
+/* Start of styling for everything larger then mobile */
+
+@media all and (min-width: 767px) {
+  /*****     Hide (burger icon) menu button on everything larger then mobile     *****/
+  .sidebar-button {
+    display: none;
+  }
+}
+
+/* End of styling for everything larger then mobile */
+
+/* End of structure styling */
+/* End of document */

@@ -1,0 +1,190 @@
+/*
+ NAKED menu system v0.1 (http://www.n-k-d.co.uk/fully-accessible-flyout-mobile-menu)
+ Fully accessible flyout mobile menu
+ Built by Neil Kelsey and Dave Hutson 27.07.2015
+ Copyright 2015 Neil Kelsey Ltd.
+ Licensed under MIT (https://github.com/XXX/LICENSE)
+*/
+
+/* Start of tag styles */
+body
+{
+     font-family: 'Open Sans', sans-serif;
+     font-weight:500;
+}
+a
+{
+    word-wrap: break-word;
+    color:#428bca;
+}
+a:hover
+{
+    color:#ec008c;
+}
+
+input
+{
+    padding:0 0 0 25px;
+    min-height:24px;
+    border:1px solid #e6e5e5;
+    border-radius: 5px;
+}
+
+/* End of tag styles */
+
+/* Start of styling for text selection */
+::selection
+{
+    color:#FFF;
+    background: #ec008c;
+}
+::-moz-selection
+{
+    color:#FFF;
+    background: #ec008c; /* Firefox */
+}
+/* End of styling for text selection */
+
+/* Start of structure styling */
+
+#logo-header
+{
+    display:block;
+    float:left;
+    margin:20px 0;
+}
+
+/* Start of main navigation styling */
+ul#menu-primary-navigation
+{
+    float:right;
+    margin:27px 0 0 0;
+}
+#menu-primary-navigation li
+{
+    transition: all 0.2s ease;
+    margin: 0 0 0 5px;
+    padding: 0;
+    background:
+        #e7e7e7;
+}
+#menu-primary-navigation li:hover a, #menu-primary-navigation li.selected a
+{
+    color:#FFF;
+}
+#menu-primary-navigation li.home:hover, #menu-primary-navigation li.home.selected, #menu-primary-navigation li.selected
+{
+    background:
+        #EC008C;
+}
+.home ::selection {
+    color:#FFF;
+    background: #EC008C;
+    }
+.home ::-moz-selection {
+    color:#FFF;
+    background: #EC008C; /* Firefox */
+}
+#menu-primary-navigation li.menu-one:hover, #menu-primary-navigation li.menu-one.selected
+{
+    background:
+        #EC008C;
+}
+.menu-one ::selection {
+    color:#FFF;
+    background: #EC008C;
+    }
+.menu-one ::-moz-selection {
+    color:#FFF;
+    background: #EC008C; /* Firefox */
+}
+#menu-primary-navigation li.menu-two:hover, #menu-primary-navigation li.menu-two.selected
+{
+    background:
+        #E80053;
+}
+.menu-two ::selection {
+    color:#FFF;
+    background: #E80053;
+    }
+.menu-two ::-moz-selection {
+    color:#FFF;
+    background: #E80053; /* Firefox */
+}
+#menu-primary-navigation li.menu-three:hover, #menu-primary-navigation li.menu-three.selected
+{
+    background:
+        #FF001D;
+}
+.menu-three ::selection {
+    color:#FFF;
+    background: #FF001D;
+    }
+.menu-three ::-moz-selection {
+    color:#FFF;
+    background: #FF001D; /* Firefox */
+}
+#menu-primary-navigation li.menu-four:hover, #menu-primary-navigation li.menu-four.selected
+{
+    background:
+        #E80D00;
+}
+.menu-four ::selection {
+    color:#FFF;
+    background: #E80D00;
+    }
+.menu-four::-moz-selection {
+    color:#FFF;
+    background: #E80D00; /* Firefox */
+}
+#menu-primary-navigation li.menu-five:hover, #menu-primary-navigation li.menu-five.selected
+{
+    background:
+        #FF2B00;
+}
+.menu-five ::selection {
+    color:#FFF;
+    background: #FF2B00;
+    }
+.menu-five::-moz-selection {
+    color:#FFF;
+    background: #FF2B00; /* Firefox */
+}
+
+#menu-primary-navigation li a
+{
+    padding:16px 15px;
+    font-size:18px;
+    color:#222;
+    text-align: center;
+}
+
+/* End of main navigation styling */
+
+
+a.offscreen
+{
+    position:absolute;
+    left:-1000px;
+    top:-1000px;
+    width:1px;
+    height:1px;
+    text-align: left;
+    overflow:hidden;
+    z-index:99999;
+}
+a.offscreen:focus, a.offscreen:active, a.offscreen:hover
+{
+    position:absolute;
+    left:0;
+    top:0;
+    width:auto;
+    height:auto;
+    overflow:visible;
+    background-color:#FF3;
+    border: 1px dotted #000;
+}
+
+/* End of structure styling */
+
+/* End of document */
